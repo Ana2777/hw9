@@ -1,5 +1,4 @@
-
-
+import java.sql.SQLOutput;
 
 public class Main {
     public static void main() {
@@ -21,18 +20,25 @@ public class Main {
         System.out.println("Год публикации - " + oneBook.getYearOfPublication());
         oneBook.setYearOfPublication(2018);
         System.out.println("Новый год публикации - " + oneBook.getYearOfPublication());
+        System.out.println(oneBook);
 
         Author bookOne = new Author("Фамилия 1", "Имя 1");
         System.out.println("Фамилия автора - " + bookOne.getSurnameAuthor());
         System.out.println("Имя автора - " + bookOne.getNameAuthor());
+        System.out.println(bookOne);
 
         Book twoBook = new Book("Название 2", author2, 1825);
         System.out.println("Название книги - " + twoBook.getTitleOfTheBook());
         System.out.println("Автор - " + twoBook.getAuthor());
         System.out.println("Новый год публикации - " + twoBook.getYearOfPublication());
+        System.out.println(twoBook);
 
         Author bookTwo = new Author("Фамилия 2", "Имя 2");
         System.out.println("Фамилия автора - " + bookTwo.getSurnameAuthor());
         System.out.println("Имя автора - " + bookTwo.getNameAuthor());
+        System.out.println(bookTwo);
+
+        oneBook.equals(twoBook);
+        bookOne.equals(bookTwo);
     }
 }
